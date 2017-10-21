@@ -1,43 +1,216 @@
-<!-- news-letter -->
-<div class="ftr">
-	<div class="container">
-		<div CLASS="row">
-			<div CLASS="col-md-12" ALIGN="center">
-				© 2016-2017 <a href="http://jobshout.com" target="_blank" title="Jobshout" style="color: #000;">Jobshout</a>. All rights reserved.
-			</div>
-		</div>
+<footer>
+<div class="footer-main">
+<div class="container">
+<div class="row">
+<div class="col-md-3 col-sm-6">
+					<div class="fotr-abt">
+						<div class="f-logo">
+							<img src="images/logo.png" />
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type...</p>
+						
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+				<div class="fotr">
+						<h3>Quick Link</h3>
+						<ul class="ftr-links">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Products</a></li>
+							<li><a href="#">Contact Us</a></li>
+				</ul>
+				</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+				<div class="fotr">
+				<h3>Get In Touch</h3>
+				<ul class="ftr-contt">
+				<li>
+				<img src="images/f-add.png" />
+				<p>dddd</p>
+				</li>
+				<li>
+				<img src="images/f-call.png" />
+				<p><a href="#">+91-98960</a>, <a href="#">+91-98960</a></p>
+				</li>
+				<li>
+				<img src="images/f-mail.png" />
+				<p><a href="#">info@dementia.com</a></p>
+				</li>
+				</ul>
+				</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+				<div class="fotr">
+				<h3>Our Newsletter</h3>
+				<div class="ftr-subscrb">
+				<p>Get Newsletter Here</p>
+				<form id="subscriberForm">
+				<input name="subscriber_name" id="subscriber_name" placeholder="Email Address" type="text">
+				<button type="submit"> Subscribe</button>
+				</form>
+				</div>
+				</div>
+				</div>
+				</div>
 	</div>
+	</div>
+<div class="copyright">
+<div class="container">
+<div class="row">
+<div class="col-sm-6">
+<p><a href="#">Privacy Policy</a> | <a href="#">Blog  </a>| <a href="#">Site Map </a> | <a href="#">Contact</a></p>
 </div>
-<!-- //news-letter -->
+<div class="col-sm-6 text-right">
+<p>Copyright © 20016-2017. All Rights Reserved.</p>
+</div>
+</div>
+</div>
+</div>
+</footer>
 
-<!-- start-smooth-scrolling -->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script src="js/easyResponsiveTabs.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/menumaker.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
-        //Horizontal Tab
-        $('#parentHorizontalTab').easyResponsiveTabs({
-            type: 'default', //Types: default, vertical, accordion
-            width: 'auto', //auto or any width like 600px
-            fit: true, // 100% fit in a container
-            tabidentify: 'hor_1', // The tab groups identifier
-            activate: function(event) { // Callback function if tab is switched
-                var $tab = $(this);
-                var $info = $('#nested-tabInfo');
-                var $name = $('span', $info);
-                $name.text($tab.text());
-                $info.show();
-            }
-        });
-	
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+	$("#cssmenu").menumaker({
+		title: "Menu",
+		format: "multitoggle"
+	});
+</script>
+<script> 
+    $('#myCarousel').carousel({
+        interval:5000,
+        pause: "false"
+    });	
+
+</script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+	function openCity(evt, cityName) {
+		// Declare all variables
+		var i, tabcontent, tablinks;
+
+		// Get all elements with class="tabcontent" and hide them
+		tabcontent = document.getElementsByclassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+
+		// Get all elements with class="tablinks" and remove the class "active"
+		tablinks = document.getElementsByclassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+
+		// Show the current tab, and add an "active" class to the link that opened the tab
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+</script>
+<script src="utilcarousel-files/utilcarousel/jquery.utilcarousel.min.js"></script>
+<script src="utilcarousel-files/magnific-popup/jquery.magnific-popup.js"></script>
+
+<!--Boostrap js file, just for the demo page menu, not a part of utilcarousel. -->
+<script src="assets/js/bootstrap.min.js"></script>
+<script>
+	$(function() {
+		$('#features-carousel').utilCarousel({
+			responsiveMode: 'itemWidthRange',
+			itemWidthRange: [260, 300],
+			autoPlay: true,
+			interval: 3000
 		});
-	
-		//here stars scrolling icon
-		$().UItoTop({ easingType: 'easeOutQuart' });
+
+		$('#simpleImg').utilCarousel({
+			responsiveMode: 'itemWidthRange',
+			itemWidthRange: [260, 320],
+			navigationText: ['<i class="icon-left-open-big"></i>', '<i class=" icon-right-open-big"></i>'],
+			navigation: true,
+			rewind: true,
+			autoPlay: true,
+			interval: 3000
+		});
+
+		$('#team-showcase').utilCarousel({
+			responsiveMode: 'itemWidthRange',
+			itemWidthRange: [300, 360]
+		});
+
+		$('#navtopbox').utilCarousel({
+			navigation: true,
+			navigationText: ['<i class="icon-left-open-big"></i>', '<i class=" icon-right-open-big"></i>'],
+
+		});
+
+		$('#normal-imglist').utilCarousel({
+			pagination: false,
+			navigationText: ['<i class="icon-left-open-big"></i>', '<i class=" icon-right-open-big"></i>'],
+			navigation: true,
+			rewind: false
+		});
+		$('#normal-imglist2').utilCarousel({
+			pagination: false,
+			responsiveMode: 'itemWidthRange',
+			itemWidthRange: [100, 130],
+			navigationText: ['<i class="icon-left-open-big"></i>', '<i class=" icon-right-open-big"></i>'],
+			navigation: true,
+			rewind: false
+		});
+
+		$('#logo-showcase').utilCarousel({
+			responsiveMode: 'itemWidthRange',
+			itemWidthRange: [200, 210],
+
+		});
+		$('#logo-showcase-gray').utilCarousel({
+			showItems: 5,
+			responsiveMode: 'itemWidthRange',
+			itemWidthRange: [200, 210],
+			interval: 3000,
+			autoPlay: true,
+			pagination: false
+		});
+
+		$('#testimonial').utilCarousel({
+			showItems: 1,
+			breakPoints: [
+				[1920, 3],
+				[1366, 3],
+				[1199, 3],
+				[991, 2],
+				[767, 1]
+			],
+			autoPlay: true
+		});
+
+		$('#fullwidth').utilCarousel({
+			breakPoints: [
+				[600, 1],
+				[900, 2],
+				[1200, 3],
+				[1500, 4],
+				[1800, 5]
+			],
+			mouseWheel: true,
+			rewind: false
+		});
+
+		$('#portfolio').utilCarousel({
+			breakPoints: [
+				[1200, 6],
+				[992, 3],
+				[768, 2],
+				[480, 1]
+			],
+			navigationText: ['<i class="icon-left-open-big"></i>', '<i class=" icon-right-open-big"></i>'],
+			navigation: true,
+			rewind: false
+		});
 	});
 </script>
